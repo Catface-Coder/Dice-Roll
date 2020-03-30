@@ -282,8 +282,8 @@ function resetTurn(){
 }
 
 //calculate totals
-total1El.innerHTML= Number(redo1El.firstElementChild.innerHTML) + 0
-console.log(redo1El.firstElementChild)
+//total1El.innerHTML= Number(redo1El.firstElementChild.innerHTML) + 0
+//console.log(redo1El.firstElementChild)
 
 //run functions
 rollDice();
