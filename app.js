@@ -19,11 +19,25 @@ const resetButtonEl=document.querySelector(".resetButton");
 const rollCountEl=document.querySelector(".rollCount");
 const total1El=document.querySelector(".total1");
 const redo1El=document.querySelector(".redo1");
+const soundButtonEl=document.querySelector(".soundButton");
 
 let rollCount=0
 
 
 //definte functions
+
+function soundToggle(){
+  soundButtonEl.addEventListener("click", function(){
+     soundButtonEl.classList.toggle("soundOn");
+     if (soundButtonEl.classList.contains("soundOn")){
+      soundButtonEl.innerText="Sound On"
+       }else {
+        soundButtonEl.innerText="Sound Off"
+     }
+     console.log(soundButtonEl.classList);
+  });
+}
+
 function keepOrRoll(){
  keep1El.addEventListener("click", function(){
     keep1El.classList.toggle("keep");
@@ -92,9 +106,11 @@ function keepOrRoll(){
 function rollDice(){
   buttonEl.addEventListener("click", function(){
     //play sound
-    //setTimeout( function(){
-      //soundEl.play();
-    //},500);
+    setTimeout( function(){
+      if (soundButtonEl.classList.contains("soundOn")){
+        soundEl.play();
+      }
+    },500);
     rollCount = rollCount+1
     rollCountEl.innerHTML= rollCount
     if (keep1El.classList.contains("roll")){
@@ -273,7 +289,8 @@ console.log(redo1El.firstElementChild)
 rollDice();
 keepOrRoll();
 rouletteRoll();
-resetTurn()
+resetTurn();
+soundToggle();
 
 
 
