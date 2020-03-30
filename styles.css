@@ -52,6 +52,22 @@
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+.soundButton {
+  background-color: rgb(72, 75, 75);
+  color: red;
+  justify-self: left;
+  position: relative;
+  margin-top: 15px;
+  margin-left: 15px;
+  padding: 5px 10px 5px 10px;
+  font-size: 16px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.soundButton:hover {
+  color: green;
+}
+
 .button:hover {
   color: green;
 }
